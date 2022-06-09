@@ -1,5 +1,5 @@
 :root{
-    --Primary_color: rgb(21, 31, 78);
+    --Primary_color: #21242b;
     --Primary_text_color : #fff;
 }
 
@@ -31,6 +31,12 @@ h3{
     font-weight: 300;
     text-transform: uppercase;
 }
+img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
 
 /*header*/
 header{
@@ -40,6 +46,7 @@ header{
 }
 #logo{
     height: 2.5rem;
+    width: auto;
 }
 /*main*/
 #principal{
@@ -59,9 +66,12 @@ header{
     position: absolute;
     z-index: -1;
 }
-.img_bg > img{
+/*about*/
+#about{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+#about_img{
     width: 100%;
-    height: 100%;
-
-    object-fit: cover;
+    border-radius: 50%;
 }
