@@ -1,0 +1,67 @@
+:root{
+    --Primary_color: rgb(21, 31, 78);
+    --Primary_text_color : #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+
+    background-color: var(--Primary_color);
+    color: var(--Primary_text_color);
+
+    overflow-x: hidden;
+}
+section{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/*header*/
+header{
+    padding: 0.5rem 0;
+    background-color: #00000048;
+    backdrop-filter: blur(5px);
+}
+#logo{
+    height: 2.5rem;
+}
+/*main*/
+#principal{
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+}
+.img_bg{
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0.8;
+
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.img_bg > img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
