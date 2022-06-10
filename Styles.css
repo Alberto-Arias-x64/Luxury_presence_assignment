@@ -1,5 +1,5 @@
 :root{
-    --Primary_color: #21242b;
+    --Primary_color: #101313;
     --Primary_text_color : #fff;
 }
 
@@ -17,8 +17,8 @@ body{
 
     overflow-x: hidden;
 }
-section{
-    width: calc(100% - 40px);
+.default_margin{
+    width: calc(100% - 60px);
     margin: 0 auto;
 }
 h1{
@@ -36,6 +36,17 @@ img{
     height: 100%;
 
     object-fit: cover;
+}
+
+/*scrollbar*/
+body::-webkit-scrollbar {
+    width: 14px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: var(--Primary_color);        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #616474;    /* color of the scroll thumb */
 }
 
 /*header*/
