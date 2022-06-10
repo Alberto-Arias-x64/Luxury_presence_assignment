@@ -13,23 +13,29 @@
         rel="stylesheet">
     <title>Miami Beach Luxury Real state | Gatien Salaun</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
 </head>
 
-<body>
+<body onload="swiper_cards()">
+    <header>
+        <section class="default_margin">
+            <img id="logo"
+                src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/eksqbks3aelreidg6ndq/gatien-salaun_branding_beige-wordmark_rgb-2"
+                alt="Logo">
+            <ion-icon name="menu-outline"></ion-icon>
+        </section>
+    </header>
     <main>
         <section id="principal">
-            <header>
-                <section class="default_margin">
-                    <img id="logo"
-                        src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/eksqbks3aelreidg6ndq/gatien-salaun_branding_beige-wordmark_rgb-2"
-                        alt="Logo">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </section>
-            </header>
-            <div class="img_bg"><img src="./Public/Principal_img_bg/adam-thomas-bC6M3pYG71g-unsplash.jpg" alt=""></div>
-            <div class="default_margin">
-                <h3>Find your dream home| View exclusive Listings</h3>
-                <h1>Make your next move</h1>
+            <div id="principal_container">
+                <div class="bg_img"><img class="img_bg"
+                        src="./Public/Principal_img_bg/adam-thomas-bC6M3pYG71g-unsplash.jpg" alt="">
+                </div>
+                <div class="default_margin">
+                    <h3>Find your dream home| View exclusive Listings</h3>
+                    <h1>Make your next move</h1>
+                </div>
             </div>
         </section>
         <section id="about" class="default_margin">
@@ -42,72 +48,154 @@
                     home. Gatien’s approach to closing deals, coupled with his extensive network of international and
                     domestic clients, from Los Angeles to Monaco, have enabled him rise to the top 1% of Realtors in a
                     short period of time.</p>
+                <div class="butons">
+                    <button>RECENT SALES</button>
+                    <button>CONTACT</button>
+                </div>
             </div>
         </section>
         <section id="cards" class="default_margin">
-            <div class="card">
-                <h2>​​The Benefits of Working with a Luxury Presence Agent</h2>
-                <p>One of the biggest perks of working with a real estate agent is their ability to market your property
-                    to the right target audience. A professional agent with the right experience will be able to
-                    identify who will be interested in your property and implement effective strategies to reach them
-                    via their website, paid advertising, social media, and other means. When you work with an agent who
-                    has partnered with Luxury Presence, you benefit from the many different types of marketing
-                    capabilities the company offers.</p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h2>​​The Benefits of Working with a Luxury Presence Agent</h2>
+                            <p>One of the biggest perks of working with a real estate agent is their ability to market
+                                your
+                                property
+                                to the right target audience. A professional agent with the right experience will be
+                                able to
+                                identify who will be interested in your property and implement effective strategies to
+                                reach
+                                them
+                                via their website, paid advertising, social media, and other means. When you work with
+                                an agent
+                                who
+                                has partnered with Luxury Presence, you benefit from the many different types of
+                                marketing
+                                capabilities the company offers.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h2>Paid Advertising on All Channels</h2>
+                            <p>To reach your potential buyers, you have to know who they are, where they spend their
+                                time
+                                online,
+                                and how they make their buying decisions. Agents who use luxury real estate marketing
+                                services
+                                are
+                                able to identify your niche market, then create paid ads on Facebook, Google, Instagram,
+                                and
+                                YouTube
+                                that reach those interested in your property. These paid ad campaigns are highly
+                                customized and
+                                targeted, ensuring you are not spending money marketing to those who are not in the
+                                market for a
+                                property such as yours.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h2>Expert Content Production</h2>
+                            <p>Content is one of the most powerful resources a real estate agent has to promote your
+                                property.
+                                Being
+                                able to create high-quality content such as video and copywriting is an essential tool
+                                that
+                                elevates
+                                the agents who use luxury real estate marketing services above their competitors.
+                                According to a
+                                recent survey, 85 percent of buyers and sellers want to work with an agent who uses
+                                video—and
+                                for
+                                good reason. An agent who uses video is able to connect with potential buyers on a
+                                deeper level
+                                and
+                                build trust and rapport. When they use video to market your property, they are showing
+                                viewers
+                                what
+                                it would really be like to walk through and live in your home—something that is much
+                                more
+                                difficult
+                                to do with a written description.
+                                However, written descriptions—or copywriting—is also important. Your property needs to
+                                be
+                                described
+                                in appealing and vibrant terms on the listing and on any additional marketing that is
+                                created to
+                                sell it. Those agents who work with Luxury Presence get access to experienced real
+                                estate
+                                copywriters who create blogs, website copy, and content marketing pieces that make your
+                                property
+                                attractive to potential buyers.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h2>Effective Search Engine Optimization</h2>
+                            <p>Recent research has shown that 44% of buyers found the home they purchased on the
+                                internet. Many
+                                of
+                                them simply googled the search terms that they wanted in a new home and started their
+                                search
+                                that
+                                way. For your home to show up in these types of searches, your real estate agent needs
+                                to use
+                                the
+                                right terms in your online marketing. The effective use of these terms is referred to as
+                                search
+                                engine optimization or SEO. The process of identifying and correctly using the right
+                                terms is a
+                                bit
+                                of a science—one that the SEO experts at Luxury Presence have mastered. When a potential
+                                buyer
+                                searches terms that match your home, your property will show up in the results and
+                                provide
+                                opportunities for the buyer to learn more.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h2>Social Media Marketing</h2>
+                            <p>If your real estate agent is an influencer on social media, he or she has access to
+                                thousands of
+                                niche buyers who are ready to invest in property. To be an influencer, an agent either
+                                needs to
+                                dedicate a large chunk of their time to social media or they need to partner with luxury
+                                real
+                                estate
+                                marketing service providers who can put in the work for them. Wouldn’t you rather your
+                                agent
+                                spent
+                                his or her time marketing your property and let an expert handle their social media
+                                presence? At
+                                Luxury Presence, our dedicated success team utilizes an agent’s stories and feed posts
+                                to help
+                                them
+                                go viral and become an authority in their industry. Once they’ve harnessed the power of
+                                becoming
+                                an
+                                influencer, they can use their voice to advocate for your home and sell it more quickly
+                                than
+                                their
+                                competitors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next" onclick="change_img()"></div>
+                <div class="swiper-button-prev" onclick="change_img()"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="card">
-                <h2>Paid Advertising on All Channels</h2>
-                <p>To reach your potential buyers, you have to know who they are, where they spend their time online,
-                    and how they make their buying decisions. Agents who use luxury real estate marketing services are
-                    able to identify your niche market, then create paid ads on Facebook, Google, Instagram, and YouTube
-                    that reach those interested in your property. These paid ad campaigns are highly customized and
-                    targeted, ensuring you are not spending money marketing to those who are not in the market for a
-                    property such as yours.</p>
-            </div>
-            <div class="card">
-                <h2>Expert Content Production</h2>
-                <p>Content is one of the most powerful resources a real estate agent has to promote your property. Being
-                    able to create high-quality content such as video and copywriting is an essential tool that elevates
-                    the agents who use luxury real estate marketing services above their competitors. According to a
-                    recent survey, 85 percent of buyers and sellers want to work with an agent who uses video—and for
-                    good reason. An agent who uses video is able to connect with potential buyers on a deeper level and
-                    build trust and rapport. When they use video to market your property, they are showing viewers what
-                    it would really be like to walk through and live in your home—something that is much more difficult
-                    to do with a written description.
-                    However, written descriptions—or copywriting—is also important. Your property needs to be described
-                    in appealing and vibrant terms on the listing and on any additional marketing that is created to
-                    sell it. Those agents who work with Luxury Presence get access to experienced real estate
-                    copywriters who create blogs, website copy, and content marketing pieces that make your property
-                    attractive to potential buyers.</p>
-            </div>
-            <div class="card">
-                <h2>Effective Search Engine Optimization</h2>
-                <p>Recent research has shown that 44% of buyers found the home they purchased on the internet. Many of
-                    them simply googled the search terms that they wanted in a new home and started their search that
-                    way. For your home to show up in these types of searches, your real estate agent needs to use the
-                    right terms in your online marketing. The effective use of these terms is referred to as search
-                    engine optimization or SEO. The process of identifying and correctly using the right terms is a bit
-                    of a science—one that the SEO experts at Luxury Presence have mastered. When a potential buyer
-                    searches terms that match your home, your property will show up in the results and provide
-                    opportunities for the buyer to learn more.</p>
-            </div>
-            <div class="card">
-                <h2>Social Media Marketing</h2>
-                <p>If your real estate agent is an influencer on social media, he or she has access to thousands of
-                    niche buyers who are ready to invest in property. To be an influencer, an agent either needs to
-                    dedicate a large chunk of their time to social media or they need to partner with luxury real estate
-                    marketing service providers who can put in the work for them. Wouldn’t you rather your agent spent
-                    his or her time marketing your property and let an expert handle their social media presence? At
-                    Luxury Presence, our dedicated success team utilizes an agent’s stories and feed posts to help them
-                    go viral and become an authority in their industry. Once they’ve harnessed the power of becoming an
-                    influencer, they can use their voice to advocate for your home and sell it more quickly than their
-                    competitors.</p>
-            </div>
+        </section>
+        <section class="default_margin">
         </section>
     </main>
     <footer>
 
     </footer>
     <script src="./Main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

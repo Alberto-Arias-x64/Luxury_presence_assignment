@@ -1,5 +1,5 @@
-const library_img = {
-    Principal:[
+{
+    "Principal":[
         "./Public/Principal_img_bg/adam-thomas-bC6M3pYG71g-unsplash.jpg",
         "./Public/Principal_img_bg/alexander-kaunas-xEaAoizNFV8-unsplash.jpg",
         "./Public/Principal_img_bg/avi-werde-HI4nq3HjImU-unsplash.jpg",
@@ -29,7 +29,7 @@ const library_img = {
         "./Public/Principal_img_bg/warion-taipei-8QIAj5tHDdc-unsplash.jpg",
         "./Public/Principal_img_bg/xie-yujie-nick-etFRTql2qpM-unsplash.jpg"
     ],
-    Cards:[
+    "Cards":[
         "./Public/card_bg/daniel-klaffke-RwOmCOGPUJA-unsplash.jpg",
         "./Public/card_bg/gina-canavan-Tf9QSkwujnA-unsplash.jpg",
         "./Public/card_bg/jon-tyson-eBN71NgyPU8-unsplash.jpg",
@@ -39,62 +39,4 @@ const library_img = {
         "./Public/card_bg/roberto-nickson-Yp9FdEqaCdk-unsplash.jpg",
         "./Public/card_bg/valdemaras-januska-XTFT78-FZeM-unsplash.jpg"
     ]
-}
-let counter_change_img = 0
-
-function read_json() {
-    const target = document.querySelector('.bg_img')
-
-    const loop = (res) => {
-        const list = document.querySelectorAll('.img_bg')
-        let index = 0
-        setInterval(() => {
-            if (index === 0) {
-                list[list.length - 1].classList.add('hide')
-                list[list.length - 1].classList.remove('show')
-            }
-            list[index].classList.add('hide')
-            list[index].classList.remove('show')
-            index += 1
-            list[index].classList.remove('hide')
-            list[index].classList.add('show')
-            //console.log(index)
-            if (index === res.length) index = 0
-        }, 4000);
-    }
-
-    fetch('./Imgs.json')
-        .then(res => res.json())
-        .then(res => {
-            const Imgs = res.Principal
-            Imgs.forEach((element, index) => {
-                target.innerHTML += `<img class="img_bg hide" src="${element}" alt="">`
-                if (index === Imgs.length - 1) loop(Imgs)
-            })
-        })
-}
-function swiper_cards() {
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        keyboard: {
-            enabled: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    })
-}
-function change_img() {
-    counter_change_img += 1
-    if (counter_change_img === library_img.Cards.length) counter_change_img = 0
-    const bg_img = document.querySelector('.swiper')
-    const random_img = library_img.Cards[counter_change_img]
-    bg_img.style = `background-image: url(${random_img})`
 }
