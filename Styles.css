@@ -2,8 +2,8 @@
     --Primary_color: #101313;
     --Primary_text_color :whitesmoke;
 
-    --Decorator: #aa6e35;
-    color: #e08f44;
+    --Decorator: #f7a559; 
+    color: #aa6e35;
 }
 
 *{
@@ -31,13 +31,15 @@ h1{
 }
 h2{ 
     font-size: 3rem;
+    font-weight: 200;
 }
 h3{
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
 }
 p{
+    font-size: 1.05rem;
     text-align: justify;
 }
 button{
@@ -54,7 +56,8 @@ button{
 }
 button:hover{
     color: var(--Decorator);
-    background-color: var(--Primary_text_color);
+    background-color: rgba(240, 248, 255, 0.2);
+    border-color: transparent;
 }
 img{
     width: 100%;
@@ -117,10 +120,18 @@ header{
     align-items: center;
 }
 #burger_icon{
-    color: aliceblue;
     font-size: 2rem;
-    cursor: pointer;
 }
+#header_info > *{
+    color: aliceblue;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+}
+#header_info > *:hover{
+    color: #f7a559;
+    font-weight: 800;
+}
+
 
 /*main*/
 #principal{
@@ -204,7 +215,15 @@ header{
 #about_contend{
     display: grid;
     grid-template-rows: min-content auto max-content;
-    gap: 0.5rem;
+    gap: 1rem;
+}
+#about_contend > h2::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+
+    display: block;
+    border-top: 1px var(--Decorator) solid;
 }
 .butons{
     display: flex;
@@ -218,12 +237,20 @@ header{
 .card{
     margin: 5rem;
     padding: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
     background-color: #0000006c;
     backdrop-filter: blur(10px);
 }
+.card > h2{
+    color: var(--Decorator);
+}
 .swiper {
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     background-image: url('./Public/card_bg/daniel-klaffke-RwOmCOGPUJA-unsplash.jpg');
     background-size: cover;
@@ -252,4 +279,3 @@ header{
     justify-content: center;
     align-items: center;
 }
-
