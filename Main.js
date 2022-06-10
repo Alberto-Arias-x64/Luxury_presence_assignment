@@ -42,6 +42,7 @@ const library_img = {
 }
 let counter_change_img = 0
 let contact_visible = false
+let hamburger_visible = false
 
 function read_json() {
     const target = document.querySelector('.bg_img')
@@ -110,5 +111,18 @@ function contact() {
         contact_form.classList.remove('show')
         contact_form.classList.add('hide')
         contact_visible = false
+    }
+}
+function hamburger() {
+    const contact_form = document.querySelector('#hamburger')
+    if (!hamburger_visible){
+        contact_form.classList.remove('hide')
+        contact_form.classList.add('show')
+        hamburger_visible = true
+    }
+    else{
+        contact_form.classList.remove('show')
+        contact_form.classList.add('hide')
+        hamburger_visible = false
     }
 }

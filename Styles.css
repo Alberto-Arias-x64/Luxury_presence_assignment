@@ -144,6 +144,7 @@ header{
 }
 #burger_icon{
     font-size: 2rem;
+    user-select: none;
 }
 #header_info > *{
     color: aliceblue;
@@ -400,5 +401,32 @@ footer{
     cursor: pointer;
 }
 #close_icon:hover{
+    color: var(--Decorator);
+}
+
+/*hamburger*/
+#hamburger{
+    width: fit-content;
+    height: fit-content;
+
+    position: fixed;
+    top: 3.5rem;
+    right: 0;
+
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    background-color: #000000c7;
+    backdrop-filter: blur(50px);
+    z-index: 10;
+}
+#hamburger > *{
+    cursor: pointer;
+}
+#hamburger > *:hover{
     color: var(--Decorator);
 }
