@@ -19,11 +19,15 @@
 
 <body onload="swiper_cards()">
     <header>
-        <section class="default_margin">
+        <section id="header_grid" class="default_margin">
             <img id="logo"
                 src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/eksqbks3aelreidg6ndq/gatien-salaun_branding_beige-wordmark_rgb-2"
                 alt="Logo">
-            <ion-icon name="menu-outline"></ion-icon>
+            <div id="header_info">
+                <p>Contact </p>
+                <p>(561) 414-3565</p>
+                <ion-icon id="burger_icon" name="menu-outline"></ion-icon>
+            </div>
         </section>
     </header>
     <main>
@@ -32,15 +36,20 @@
                 <div class="bg_img"><img class="img_bg"
                         src="./Public/Principal_img_bg/adam-thomas-bC6M3pYG71g-unsplash.jpg" alt="">
                 </div>
-                <div class="default_margin">
-                    <h3>Find your dream home| View exclusive Listings</h3>
+                <div id="principal_title" class="default_margin">
+                    <h3>Find your dream home | View exclusive Listings</h3>
                     <h1>Make your next move</h1>
                 </div>
             </div>
         </section>
         <section id="about" class="default_margin">
-            <img id="about_img" src="./Public/rfuumphvil8xqbmfeafn.jpg" alt="gatien salaun">
-            <div>
+            <div id="about_img">
+                <img src="./Public/rfuumphvil8xqbmfeafn.jpg" alt="gatien salaun">
+                <div id="about_img_decorator">
+                    <img src="./Public/Group3.png" alt="">
+                </div>
+            </div>
+            <div id="about_contend">
                 <h2>MEET GATIEN</h2>
                 <p>Gatien has an impressive track record of delivering exceptional results for every client he serves.
                     He understands every facet of the real estate business and extends that experience and market

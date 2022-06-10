@@ -29,6 +29,9 @@ h1{
     font-weight: 400;
     text-transform: uppercase;
 }
+h2{ 
+    font-size: 3rem;
+}
 h3{
     font-size: 1rem;
     font-weight: 300;
@@ -58,6 +61,7 @@ img{
     height: 100%;
 
     object-fit: cover;
+    transition: 200ms ease-in-out;
 }
 
 .show{
@@ -94,9 +98,28 @@ header{
     top: 0;
     z-index: 10;
 }
+#header_grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: end;
+}
+
 #logo{
     height: 2.5rem;
     width: auto;
+}
+#header_info{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 1rem;
+
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+}
+#burger_icon{
+    color: aliceblue;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /*main*/
@@ -110,6 +133,8 @@ header{
 #principal_container{
     width: 100%;
     height: 100vh;
+    display: grid;
+    grid-template-rows: auto max-content;
 
     position: relative;
 }
@@ -117,46 +142,97 @@ header{
     width: 100%;
     height: 100%;
     
-    opacity: 0.8;
+    opacity: 0.7;
 
     top: 0;
     right: 0;
     position: absolute;
     z-index: -1;
 }
+#principal_title{
+    margin: 3rem auto;
+}
 
 /*about*/
 #about{
+    margin: 6rem auto;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 300px auto;
+    gap: 2rem;
 
     position: relative;
 }
 #about_img{
-    width: 100%;
+    width: 300px;
+    height: 300px;
+
     border-radius: 50%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+#about_img > img{
+    position: absolute;
+    z-index: 0;
+}
+#about_img:hover > img{
+    transform: scale(1.03);
+}
+#about_img_decorator{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #00000028;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: 200ms ease-in-out;
+}
+#about_img_decorator > img{
+    width: 80%;
+    height: 80%;
+}
+#about_img:hover > #about_img_decorator{
+    opacity: 1;
+}
+#about_contend{
+    display: grid;
+    grid-template-rows: min-content auto max-content;
+    gap: 0.5rem;
+}
+.butons{
+    display: flex;
+    gap: 2rem;
 }
 
 /*cards*/
-.card{
-    margin: 1rem;
-    padding: 2rem;
-    background-color: #00000048;
-    backdrop-filter: blur(5px);
+#cards{
+    margin: 8rem auto;
 }
-
+.card{
+    margin: 5rem;
+    padding: 2rem;
+    background-color: #0000006c;
+    backdrop-filter: blur(10px);
+}
 .swiper {
     width: 100%;
-    height: 100%;
+    height: 80vh;
+    display: flex;
     background-image: url('./Public/card_bg/daniel-klaffke-RwOmCOGPUJA-unsplash.jpg');
     background-size: cover;
 }
-
 .swiper-slide {
-    text-align: justify;
+   /*  text-align: justify; */
 
     /* Center slide text vertically */
-    display: -webkit-box;
+/*     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -167,12 +243,13 @@ header{
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
+    align-items: center; */
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
