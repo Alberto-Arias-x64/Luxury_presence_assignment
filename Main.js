@@ -41,6 +41,7 @@ const library_img = {
     ]
 }
 let counter_change_img = 0
+let contact_visible = false
 
 function read_json() {
     const target = document.querySelector('.bg_img')
@@ -97,4 +98,17 @@ function change_img() {
     const bg_img = document.querySelector('.swiper')
     const random_img = library_img.Cards[counter_change_img]
     bg_img.style = `background-image: url(${random_img})`
+}
+function contact() {
+    const contact_form = document.querySelector('#form')
+    if (!contact_visible){
+        contact_form.classList.remove('hide')
+        contact_form.classList.add('show')
+        contact_visible = true
+    }
+    else{
+        contact_form.classList.remove('show')
+        contact_form.classList.add('hide')
+        contact_visible = false
+    }
 }

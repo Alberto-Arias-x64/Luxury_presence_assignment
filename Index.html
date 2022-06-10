@@ -24,12 +24,15 @@
                 src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/eksqbks3aelreidg6ndq/gatien-salaun_branding_beige-wordmark_rgb-2"
                 alt="Logo">
             <div id="header_info">
-                <p>Contact </p>
+                <p onclick="contact()">Contact </p>
                 <p>(561) 414-3565</p>
                 <ion-icon id="burger_icon" name="menu-outline"></ion-icon>
             </div>
         </section>
     </header>
+    <section id="hambuger" class="hide">
+
+    </section>
     <main>
         <section id="principal">
             <div id="principal_container">
@@ -59,7 +62,7 @@
                     short period of time.</p>
                 <div class="butons">
                     <button>RECENT SALES</button>
-                    <button>CONTACT</button>
+                    <button onclick="contact()">CONTACT</button>
                 </div>
             </div>
         </section>
@@ -211,21 +214,21 @@
             </div>
             <div class="footer_info_card">
                 <div>
-                    <p class="bold">ADDRESS</p>
-                    <p>1682 JEFFERSON AVE., #103 MIAMI BEACH, FL 33139</p>
+                    <p class="bold">Address</p>
+                    <p>1682 Jefferson AVE., #103 Miami Beach, FL 33139</p>
                 </div>
                 <div>
-                    <p class="bold">OPEN HOURS</p>
-                    <p>MONDAY - SUNDAY, 9 AM - 7 PM</p>
+                    <p class="bold">Open Hours</p>
+                    <p>Monday - Sunday, 9 AM - 7 PM</p>
                 </div>
             </div>
             <div class="footer_info_card">
                 <div>
-                    <p class="bold">EMAIL</p>
-                    <p>GATIEN.SALAUN@CBREALTY.COM</p>
+                    <p class="bold">Email</p>
+                    <p>gatien.salaun@cbrealty.com</p>
                 </div>
                 <div>
-                    <p class="bold">PHONE NUMBER</p>
+                    <p class="bold">Phone Number</p>
                     <p>(561) 414-3565</p>
                 </div>
             </div>
@@ -252,12 +255,53 @@
         <div id="copyright">
             <div>
                 <p>Copyright © 2022 | Privacy Policy</p>
-                <p>Website designed and developed by X64.</p>
+                <p>Website designed and developed by Alberto_Arias_x64.</p>
             </div>
             <img class="half_opacity"
                 src="https://res.cloudinary.com/luxuryp/image/upload/v1607481718/realtor_at3miv_3_m0nvz6.png" alt="">
         </div>
     </footer>
+    <section id="form" class="hide">
+        <div id="form_data">
+            <h2>Contact us</h2>
+            <div>
+                <h3>Full Name</h3>
+                <input type="text" placeholder="Name">
+            </div>
+            <div>
+                <h3>Email Address</h3>
+                <input type="email" placeholder="gatien@email.com">
+            </div>
+            <div>
+                <h3>Phone number</h3>
+                <input type="number" placeholder="123 456 789">
+            </div>
+            <div>
+                <h3>Message</h3>
+                <textarea name="" id="" cols="30" rows="3" placeholder="Hi Gatien ! ..."></textarea>
+            </div>
+            <button onclick="contact()">Send</button>
+        </div>
+        <div id="form_contact">
+            <ion-icon onclick="contact()" id="close_icon" name="close"></ion-icon>
+            <div>
+                <p class="bold"><ion-icon name="navigate"></ion-icon>Address</p>
+                <p>1682 Jefferson AVE., #103 Miami Beach, FL 33139</p>
+            </div>
+            <div>
+                <p class="bold"><ion-icon name="time"></ion-icon> Open Hours</p>
+                <p>Monday - Sunday, 9 AM - 7 PM</p>
+            </div>
+            <div>
+                <p class="bold"><ion-icon name="mail"></ion-icon> Email</p>
+                <p>gatien.salaun@cbrealty.com</p>
+            </div>
+            <div>
+                <p class="bold"><ion-icon name="call"></ion-icon> Phone Number</p>
+                <p>(561) 414-3565</p>
+            </div>
+        </div>
+    </section>
     <script src="./Main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
