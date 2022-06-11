@@ -23,6 +23,10 @@ Welcome to my task assignment, in this project I show all my art and elegance wh
 
 - Add presentation on mobile devices (Responsive Designe)
 
+## Current Developt Time
+
+- 13H
+
 ## Color Reference
 
 | Color             | Hex                                                                |
