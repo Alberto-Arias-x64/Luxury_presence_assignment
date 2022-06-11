@@ -26,7 +26,7 @@ body{
 }
 h1{
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
 }
 h2{ 
@@ -80,13 +80,17 @@ img{
 
 /*Public clases*/
 .show{
-    transition: all 200ms ease-in-out;
+    transition: all 100ms ease-in-out;
     opacity: 1;
 }
 .hide{
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
     opacity: 0;
     visibility: hidden;
+}
+.hide_slow{
+    transition: all 480ms ease-in-out;
+    opacity: 0 !important;
 }
 .bold{
     font-weight: 800;
@@ -98,7 +102,6 @@ img{
 .half_opacity{
     opacity: 0.5;
 }
-
 
 /*scrollbar*/
 body::-webkit-scrollbar {

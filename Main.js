@@ -1,5 +1,5 @@
 const library_img = {
-    Principal:[
+    Principal: [
         "./Public/Principal_img_bg/adam-thomas-bC6M3pYG71g-unsplash.jpg",
         "./Public/Principal_img_bg/alexander-kaunas-xEaAoizNFV8-unsplash.jpg",
         "./Public/Principal_img_bg/avi-werde-HI4nq3HjImU-unsplash.jpg",
@@ -17,7 +17,6 @@ const library_img = {
         "./Public/Principal_img_bg/max-harlynking-kAbOlQRY78s-unsplash.jpg",
         "./Public/Principal_img_bg/mimi-di-cianni-swRx6JNNJh8-unsplash.jpg",
         "./Public/Principal_img_bg/nichlas-andersen-ZFXrgzHu1KU-unsplash.jpg",
-        "./Public/Principal_img_bg/nichlas-andersen-ZFXrgzHu1KU-unsplash.jpg",
         "./Public/Principal_img_bg/paulo-almeida-157NwUNEdxQ-unsplash.jpg",
         "./Public/Principal_img_bg/r-architecture-uFQOmuz8JVY-unsplash.jpg",
         "./Public/Principal_img_bg/ralph-ravi-kayden-2d4lAQAlbDA-unsplash.jpg",
@@ -29,7 +28,7 @@ const library_img = {
         "./Public/Principal_img_bg/warion-taipei-8QIAj5tHDdc-unsplash.jpg",
         "./Public/Principal_img_bg/xie-yujie-nick-etFRTql2qpM-unsplash.jpg"
     ],
-    Cards:[
+    Cards: [
         "./Public/card_bg/daniel-klaffke-RwOmCOGPUJA-unsplash.jpg",
         "./Public/card_bg/gina-canavan-Tf9QSkwujnA-unsplash.jpg",
         "./Public/card_bg/jon-tyson-eBN71NgyPU8-unsplash.jpg",
@@ -41,6 +40,7 @@ const library_img = {
     ]
 }
 let counter_change_img = 0
+let counter_change_img_bg = 0
 let contact_visible = false
 let hamburger_visible = false
 
@@ -102,12 +102,12 @@ function change_img() {
 }
 function contact() {
     const contact_form = document.querySelector('#form')
-    if (!contact_visible){
+    if (!contact_visible) {
         contact_form.classList.remove('hide')
         contact_form.classList.add('show')
         contact_visible = true
     }
-    else{
+    else {
         contact_form.classList.remove('show')
         contact_form.classList.add('hide')
         contact_visible = false
@@ -115,14 +115,35 @@ function contact() {
 }
 function hamburger() {
     const contact_form = document.querySelector('#hamburger')
-    if (!hamburger_visible){
+    if (!hamburger_visible) {
         contact_form.classList.remove('hide')
         contact_form.classList.add('show')
         hamburger_visible = true
     }
-    else{
+    else {
         contact_form.classList.remove('show')
         contact_form.classList.add('hide')
         hamburger_visible = false
     }
+}
+function redir(link) {
+    window.open(link, '_blank')
+}
+function change_bg() {
+    setInterval(() => {
+        const img_bg = document.querySelector('.img_bg')
+        img_bg.classList.add('hide_slow')
+        setTimeout(() => {
+            img_bg.src = library_img.Principal[counter_change_img_bg]
+        }, 250);
+        setTimeout(() => {
+            img_bg.classList.remove('hide_slow')
+        }, 500);
+        counter_change_img_bg += 1
+        if (counter_change_img_bg === library_img.Principal.length) counter_change_img_bg = 0
+    }, 5000);
+}
+const start = () =>{
+    change_bg()
+    swiper_cards()
 }
