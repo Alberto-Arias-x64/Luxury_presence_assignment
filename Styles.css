@@ -20,10 +20,6 @@ body{
 
     overflow-x: hidden;
 }
-.default_margin{
-    width: calc(100% - 60px);
-    margin: 0 auto;
-}
 h1{
     font-size: 4rem;
     font-weight: 600;
@@ -92,6 +88,9 @@ img{
     transition: all 480ms ease-in-out;
     opacity: 0 !important;
 }
+.dis_none{
+    display: none;
+}
 .bold{
     font-weight: 800;
     display: flex;
@@ -101,6 +100,10 @@ img{
 }
 .half_opacity{
     opacity: 0.5;
+}
+.default_margin{
+    width: calc(100% - 100px);
+    margin: 0 auto;
 }
 
 /*scrollbar*/
@@ -366,7 +369,7 @@ footer{
 /*form*/
 #form{
     width: 90vw;
-    height: 90vh;
+    max-height: 750px;
 
     position: fixed;
     top: calc(3.5rem + 1vh);

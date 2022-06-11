@@ -23,7 +23,6 @@ const library_img = {
         "./Public/Principal_img_bg/robert-bye-3iSbDwNWnjo-unsplash.jpg",
         "./Public/Principal_img_bg/ryan-parker-ucnZANGmyxM-unsplash.jpg",
         "./Public/Principal_img_bg/stephen-tasker-RdX86jJQ9p8-unsplash.jpg",
-        "./Public/Principal_img_bg/stories--BqB2zptPQo-unsplash.jpg",
         "./Public/Principal_img_bg/sven-read-1TAM-xEwQrs-unsplash.jpg",
         "./Public/Principal_img_bg/warion-taipei-8QIAj5tHDdc-unsplash.jpg",
         "./Public/Principal_img_bg/xie-yujie-nick-etFRTql2qpM-unsplash.jpg"
