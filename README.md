@@ -11,7 +11,7 @@ Welcome to my task assignment, in this project I show all my art and elegance wh
 
 ## Demo
 
-[![luxury-presence-assignment](https://luxury-presence-assignment.vercel.app)](https://luxury-presence-assignment.vercel.app)
+[THIS LINK](https://luxury-presence-assignment.vercel.app)
 
 ## Roadmap
 
