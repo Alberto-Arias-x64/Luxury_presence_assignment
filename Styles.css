@@ -242,6 +242,7 @@ header{
     opacity: 1;
 }
 #about_contend{
+    max-width: 1200px;
     display: grid;
     grid-template-rows: min-content auto max-content;
     gap: 1rem;
